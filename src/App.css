@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* 🔧 Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: hsl(166, 65%, 95%);
+  color: hsl(222, 47%, 15%);
+  font-family: 'Inter', sans-serif;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 128, 128, 0.1);
+}
+
+/* 🚀 Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: all 300ms ease-in-out;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #14b8a6aa);
+  transform: scale(1.05);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #0ea5e9aa); /* bright sky blue */
+}
+
+/* 🔄 Rotation animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🌍 Respect user motion preferences */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* 💳 Card design */
+.card {
+  padding: 2em;
+  margin-top: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.15);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📘 Docs link styling */
+.read-the-docs {
+  color: hsl(215, 20%, 50%);
+  font-style: italic;
+  transition: color 0.3s;
+}
+.read-the-docs:hover {
+  color: hsl(215, 80%, 40%);
+}
